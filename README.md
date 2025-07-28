@@ -1,4 +1,4 @@
 # Ntokozo
-VendingMachine Contributers 
+Votting System Project Contributers 
 -Kenneth
 -Enock
