@@ -10,4 +10,19 @@ module.exports = {
       accounts: [process.env.PRIVATE_KEY],
     },
   },
+  etherscan: {
+    apiKey: {
+      arbitrumSepolia: process.env.ARBISCAN_API_KEY || "YOUR_ARBISCAN_API_KEY"
+    },
+    customChains: [
+      {
+        network: "arbitrumSepolia",
+        chainId: 421614,
+        urls: {
+          apiURL: "https://api-sepolia.arbiscan.io/api",
+          browserURL: "https://sepolia.arbiscan.io"
+        }
+      }
+    ]
+  },
 };
