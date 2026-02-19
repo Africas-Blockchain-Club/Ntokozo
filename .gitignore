@@ -1,5 +1,6 @@
 # Ignore dependencies
 node_modules/
+client/node_modules/
 .pnp
 .pnp.js
 
@@ -9,8 +10,13 @@ cache/
 .next/
 out/
 build/
+dist/
 
 # Ignore secrets (CRITICAL)
 .env
 .env.local
 .env.secret
+
+# OS and logs
+.DS_Store
+*.log
