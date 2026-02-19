@@ -28,7 +28,7 @@ export default function Home() {
   const alchemyUrl = process.env.NEXT_PUBLIC_ALCHEMY_URL;
   
   // Sepolia Contract Address that must be updated here if redeployed
-  const contractAddress = "0xfbC1240ef0A2275FC9bBF21e8288C57eb4676062";
+  const contractAddress = "0x5889c2EE0e033bFa2064C8615F3cDB9fc5307C21";
 
   // --- CONNECT WALLET ---
   async function connectWallet() {
