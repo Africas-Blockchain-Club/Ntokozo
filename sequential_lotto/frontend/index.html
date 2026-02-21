@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NtoLotto - Win Big!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>AMA Dollar</h1>
+            <p class="subtitle">Pick 7 numbers (1-49) and win sequential matches!</p>
+            <div id="walletSection">
+                <button id="connectWallet" class="btn-primary">Connect Wallet</button>
+                <div id="accountInfo" style="display: none;">
+                    <span id="accountAddress"></span>
+                    <span id="accountBalance"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Lottery Info Card -->
+            <div class="card info-card">
+                <h2>📊 Lottery Info</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Ticket Price:</span>
+                        <span class="value">0.0000001 ETH</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Prize Pool:</span>
+                        <span class="value" id="prizePool">Loading...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Active Tickets:</span>
+                        <span class="value" id="ticketCount">Loading...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Next Draw:</span>
+                        <span class="value" id="nextDraw">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Number Selection Card -->
+            <div class="card">
+                <h2>🎫 Buy Your Ticket</h2>
+                <p class="instruction">Select 7 numbers from 1 to 49:</p>
+                
+                <div class="selected-numbers">
+                    <div class="number-slot" data-index="0">?</div>
+                    <div class="number-slot" data-index="1">?</div>
+                    <div class="number-slot" data-index="2">?</div>
+                    <div class="number-slot" data-index="3">?</div>
+                    <div class="number-slot" data-index="4">?</div>
+                    <div class="number-slot" data-index="5">?</div>
+                    <div class="number-slot" data-index="6">?</div>
+                </div>
+
+                <div class="number-grid" id="numberGrid">
+                    <!-- Numbers 1-49 will be generated here -->
+                </div>
+
+                <div class="action-buttons">
+                    <button id="quickPick" class="btn-secondary">🎲 Quick Pick</button>
+                    <button id="clearSelection" class="btn-secondary">🔄 Clear</button>
+                    <button id="buyTicket" class="btn-primary" disabled>Buy Ticket (0.0000001 ETH)</button>
+                </div>
+            </div>
+
+            <!-- Last Winning Numbers Card -->
+            <div class="card">
+                <h2>🏆 Last Winning Numbers</h2>
+                <div class="winning-numbers" id="winningNumbers">
+                    <div class="winning-number">?</div>
+                    <div class="winning-number">?</div>
+                    <div class="winning-number">?</div>
+                    <div class="winning-number">?</div>
+                    <div class="winning-number">?</div>
+                    <div class="winning-number">?</div>
+                    <div class="winning-number">?</div>
+                </div>
+            </div>
+
+            <!-- Prize Structure Card -->
+            <div class="card">
+                <h2>💰 Prize Structure</h2>
+                <table class="prize-table">
+                    <thead>
+                        <tr>
+                            <th>Sequential Matches</th>
+                            <th>Prize %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7 Numbers</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr>
+                            <td>5 or 6 Numbers</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>4 Numbers</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>3 Numbers</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>2 Numbers</td>
+                            <td>5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note">⚠️ Numbers must match sequentially from the start!</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Contract Address: <span id="contractAddress"></span></p>
+            <p>Network: Sepolia Testnet</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" style="display: none;">
+        <div class="spinner"></div>
+        <p id="loadingText">Processing...</p>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

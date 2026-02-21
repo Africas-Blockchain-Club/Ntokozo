@@ -1,0 +1,7 @@
+remote: error: Trace: 1534d58d34299d51808bdc4d74e7d8b36d0e049eb216920df1d9a20235b87ff0        
+remote: error: See https://gh.io/lfs for more information.        
+remote: error: File sequential_lotto/frontend/node_modules/@next/swc-win32-x64-msvc/next-swc.win32-x64-msvc.node is 141.54 MB; this exceeds GitHub's file size limit of 100.00 MB        
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/Africas-Blockchain-Club/Ntokozo.git
+ ! [remote rejected]   main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/Africas-Blockchain-Club/Ntokozo.git'

@@ -1,0 +1,26 @@
+# Ignore dependencies
+node_modules/
+**/node_modules/
+vending_machine_client/node_modules/
+.pnp
+.pnp.js
+
+# Ignore build outputs
+artifacts/
+cache/
+.next/
+out/
+build/
+dist/
+coverage/
+typechain/
+
+# Ignore secrets (CRITICAL)
+.env
+.env.local
+.env.secret
+**/.env
+
+# OS and logs
+.DS_Store
+*.log
